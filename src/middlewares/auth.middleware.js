@@ -9,7 +9,7 @@ export const JWTVerify = asyncHandler(async(req, _, next)=>{
         const token = req?.cookies?.accessToken ||
         req.header("Authorization")?.replace("Bearer ","")
     
-        if(!token){
+        if(!token){ 
             throw new ApiError(404, "Token not found")
         }
     

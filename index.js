@@ -13,7 +13,7 @@ const server = app.listen(port, ()=>{
     console.log(`server listening on port ${port}`)
 })
 
-const wss = new WebSocketServer({server}); 
+const wss = new WebSocketServer({server});
 
 wss.on('connection', (ws) => {
     ws.on('message', (msg) => {
